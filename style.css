@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.red {
+  color: red;
+}
