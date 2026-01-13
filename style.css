@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Google Sans Code";
+  src: url(./assets/fonts/GoogleSansCode-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Google Sans Code Italic";
+  src: url(./assets/fonts/GoogleSansCode-Italic-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -7,10 +17,26 @@ body {
   background-color: #05171e;
 
   color: aliceblue;
+
+  font-family: "Google Sans Code";
+}
+
+.header_background {
+  height: 80px;
+  background-color: #082029;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: -1;
 }
 
 .page_header {
-  background-color: #082029;
+  height: 80px;
+  width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -23,6 +49,14 @@ body {
 .separator {
   border-bottom: 2px solid blue;
   width: 100%;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .book_icon {
@@ -71,19 +105,19 @@ body {
 
 .book_info {
   width: 90%;
+  height: 150px;
 }
 
 .book_info td {
-  padding: 12px 0;
+  padding-bottom: 8px;
 }
 
 .book_info th {
   text-align: start;
-  width: 100px;
 }
 
-.comments_section {
-  padding: 16px 0;
+.book_info td:last-child {
+  text-align: end;
 }
 
 .price_likes_container {
@@ -101,7 +135,6 @@ body {
 }
 
 .heart {
-  background-image: url(./assets/icons/favorite_24dp_E8625A_FILL0_wght400_GRAD0_opsz24.png);
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -113,8 +146,12 @@ body {
   background-image: url(./assets/icons/favorite_24dp_FF0000_FILL1_wght400_GRAD0_opsz24.png);
 }
 
-.red_heart {
+.like {
   background-image: url(./assets/icons/favorite_24dp_FF0000_FILL1_wght400_GRAD0_opsz24.png);
+}
+
+.no_like {
+  background-image: url(./assets/icons/favorite_24dp_E8625A_FILL0_wght400_GRAD0_opsz24.png);
 }
 
 .price_likes_container img {
@@ -126,6 +163,29 @@ body {
   height: 200px;
   width: 350px;
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: blue #082029;
+}
+
+.comments_section {
+  padding: 16px 0;
+
+  font-family: "Google Sans Code Italic";
+}
+
+.comments_container p {
+  font-weight: 100;
+  text-align: justify;
+  padding: 0 8px 8px 8px;
+}
+
+.comments_container h4 {
+  align-self: center;
+  justify-self: center;
+}
+
+.comments_section th {
+  text-align: start;
 }
 
 .comments_formular {

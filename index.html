@@ -9,33 +9,14 @@
     <link rel="stylesheet" href="style.css" />
     <title>Bookstore</title>
   </head>
-  <body>
+  <body onload="loadBooks()">
+    <div class="header_background"></div>
     <header class="page_header">
       <h1><span class="red">DA</span>Bookstore</h1>
       <p>- get your book here</p>
     </header>
     <main>
-      <article class="main_section">
-        <header class="book_section_header" id="book_headline"></header>
-        <section class="book_section_article">
-          <hr class="separator" />
-          <p class="book_icon">📖️</p>
-          <hr class="separator" />
-          <section class="price_likes_container" id="price_likes"></section>
-          <table class="book_info" id="book_info"></table>
-          <hr class="separator" />
-          <section class="comments_section">
-            <h3>Kommentare:</h3>
-            <div class="scroll_container">
-              <table class="comments_table" id="comments"></table>
-            </div>
-            <form class="comments_formular">
-              <input type="text" placeholder="Schreibe ein Kommentar" />
-              <button>Send</button>
-            </form>
-          </section>
-        </section>
-      </article>
+      <div class="content" id="books_content"></div>
     </main>
   </body>
 </html>

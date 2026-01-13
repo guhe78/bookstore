@@ -4,17 +4,15 @@ function bookTitleTemplate(index) {
     `;
 }
 
-function getLikesAndPrice(index) {
+function getLikesAndPriceTemplate(index) {
   return `
-  <p class="book_price red" id="book_price">${books[index].price}</p>
-            <div class="likes_container">
-              <p class="likes" id="likes">${books[index].likes}</p>
-              <span
-                id="like_heart"
-                onclick="onClickLike()"
-                class="heart"
-              ></span>
-            </div>
+    <p class="book_price red" id="book_price">${books[index].price.toFixed(
+      2
+    )} €</p>
+    <div class="likes_container">
+      <p class="likes" id="likes${index}">${books[index].likes}</p>
+      <span id="like_heart${index}" onclick="onClickLike(event)" class="heart"></span>
+    </div>
   `;
 }
 
@@ -22,29 +20,57 @@ function getBookInfoTemplate(index) {
   return `
     <tr>
       <th>Author</th>
-      <td>:</td>
+      <td class="table_separator"></td>
       <td>${books[index].author}</td>
     </tr>
     <tr>
       <th>Erscheinungsjahr</th>
-      <td>:</td>
-      <td>${books[index].author}</td>
+      <td class="table_separator"></td>
+      <td>${books[index].publishedYear}</td>
     </tr>
     <tr>
       <th>Genre</th>
-      <td>:</td>
+      <td class="table_separator"></td>
       <td>${books[index].genre}</td>
     </tr>
   `;
 }
 
-function getBookCommentsTemplate(index) {
+function getBookCommentsTemplate(comment) {
   return `
-    <tr>
-      <th>Name</th>
-        <td>:</td>
-        <td>${books[index].comments[0].name}</td>
-        <td>${books[index].comments[0].comment}</td>
-    </tr>          
+    <h4>${comment.name}</h4>
+    <p>${comment.comment}</p>        
+  `;
+}
+
+function getNoCommentsTemplate() {
+  return `
+    <h4>Noch keine Kommentare vorhanden</h4>
+  `;
+}
+
+function getMainContentTemplate(index) {
+  return `
+    <article class="main_section">
+      <header class="book_section_header" id="book_headline${index}"></header>
+        <section class="book_section_article">
+          <hr class="separator" />
+          <p class="book_icon">📖️</p>
+          <hr class="separator" />
+          <section class="price_likes_container" id="price_likes${index}"></section>
+          <table class="book_info" id="book_info${index}"></table>
+          <hr class="separator" />
+          <section class="comments_section">
+            <h3>Kommentare:</h3>
+            <div class="scroll_container">
+              <div class="comments_container" id="comments${index}"></div>
+            </div>
+            <form class="comments_formular">
+              <input type="text" placeholder="Schreibe ein Kommentar" />
+              <button>Send</button>
+            </form>
+          </section>
+        </section>
+    </article>
   `;
 }
