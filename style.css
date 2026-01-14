@@ -54,6 +54,8 @@ body {
 .content {
   max-width: 1440px;
   margin: 0 auto;
+
+  padding: 0 48px;
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
@@ -162,7 +164,7 @@ body {
 
 .scroll_container {
   height: 200px;
-  width: 350px;
+  max-width: 350px;
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: blue #082029;
@@ -183,10 +185,6 @@ body {
 .comments_container h4 {
   align-self: center;
   justify-self: center;
-}
-
-.comments_section th {
-  text-align: start;
 }
 
 .comments_formular {
