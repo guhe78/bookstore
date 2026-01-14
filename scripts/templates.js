@@ -38,7 +38,7 @@ function getBookInfoTemplate(index) {
 
 function getBookCommentsTemplate(comment) {
   return `
-    <h4>${comment.name}</h4>
+    <h4>[${comment.name}]</h4>
     <p>${comment.comment}</p>        
   `;
 }
@@ -65,10 +65,13 @@ function getMainContentTemplate(index) {
             <div class="scroll_container">
               <div class="comments_container" id="comments${index}"></div>
             </div>
-            <form class="comments_formular">
-              <input type="text" placeholder="Schreibe ein Kommentar" />
-              <button>Send</button>
-            </form>
+            <section class="comments_formular">
+              <input id="comment_input${index}" class="comment_input" type="text"
+                placeholder="Schreibe ein Kommentar" onkeyup="enterKeyEvent(event)" />
+              <button class="send_button" id="send_new_comment_button${index}" 
+                onclick="onClickAddComment(event)">
+              </button>
+            </section>
           </section>
         </section>
     </article>

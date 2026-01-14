@@ -35,7 +35,7 @@ body {
 
 .page_header {
   height: 80px;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -144,6 +144,7 @@ body {
 
 .heart:hover {
   background-image: url(./assets/icons/favorite_24dp_FF0000_FILL1_wght400_GRAD0_opsz24.png);
+  cursor: pointer;
 }
 
 .like {
@@ -168,7 +169,7 @@ body {
 }
 
 .comments_section {
-  padding: 16px 0;
+  padding-top: 16px;
 
   font-family: "Google Sans Code Italic";
 }
@@ -189,5 +190,34 @@ body {
 }
 
 .comments_formular {
-  padding: 16px;
+  padding: 16px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.comment_input {
+  background-color: #05171e;
+  color: #f0f8ff;
+  padding: 8px;
+  height: 32px;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid blue;
+  border-radius: 8px;
+  padding-bottom: 4px;
+}
+
+.send_button {
+  background-image: url(./assets/icons/send_32dp_F0F8FF_FILL1_wght400_GRAD0_opsz40.png);
+  width: 32px;
+  height: 32px;
+  background-color: #0d3240;
+  border: none;
+  padding: 0;
+  margin-left: 4px;
+}
+
+.send_button:hover {
+  background-image: url(./assets/icons/send_and_archive_32dp_F0F8FF_FILL1_wght400_GRAD0_opsz40.png);
+  cursor: pointer;
 }
