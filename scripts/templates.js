@@ -20,17 +20,14 @@ function getBookInfoTemplate(index) {
   return `
     <tr>
       <th>Author</th>
-      <td class="table_separator"></td>
       <td>${books[index].author}</td>
     </tr>
     <tr>
       <th>Erscheinungsjahr</th>
-      <td class="table_separator"></td>
       <td>${books[index].publishedYear}</td>
     </tr>
     <tr>
       <th>Genre</th>
-      <td class="table_separator"></td>
       <td>${books[index].genre}</td>
     </tr>
   `;
@@ -62,9 +59,7 @@ function getMainContentTemplate(index) {
           <hr class="separator" />
           <section class="comments_section">
             <h3>Kommentare:</h3>
-            <div class="scroll_container">
-              <div class="comments_container" id="comments${index}"></div>
-            </div>
+            <div class="comments_container" id="comments${index}"></div>
             <section class="comments_formular">
               <input id="comment_input${index}" class="comment_input" type="text"
                 placeholder="Schreibe ein Kommentar" onkeyup="enterKeyEvent(event)" />

@@ -91,7 +91,7 @@ function getIndexNumber(idString) {
 
 function setNewComment(index, comment) {
   let newComment = {
-    name: "Günni",
+    name: "Leser2026",
     comment: comment,
   };
 
